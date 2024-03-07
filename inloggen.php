@@ -21,7 +21,3 @@ else
 }
 
 
-echo ["gebruiksnummer"];
-echo ["gebruikersnaam"];
-echo ["wachtwoord"];
- 

@@ -20,3 +20,4 @@ catch (PDOException $e)
 $stat = $conn->prepare("SELECT gebruikersnaam, wachtwoord FROM users");
 $stat->execute();
 
+.
