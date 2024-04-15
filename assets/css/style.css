@@ -1,14 +1,18 @@
-*{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  font-family: "Karantina", system-ui;
-  background-color: white;
+  color: #ffe5d2;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
+    monospace;
+  background-color: #1d1d1d;
 }
-
 
 .light {
   font-weight: 300;
   font-style: normal;
+  letter-spacing: 1.5px;
 }
 
 .regular {
@@ -22,22 +26,364 @@
 }
 /* fonts */
 
-header{
-  height: 30vh;
+.line::after {
+  display: block;
+  height: 0.25vh;
+  width: 0vw;
+  background-color: #f5743c;
+  content: " ";
+  transition: all 0.4s;
 }
 
-h1{
+.line:hover::after {
+  width: 100%;
+  transition: all 0.4s;
+}
+
+header {
+  border-color: #ffe5d2;
+  border-style: solid;
+  border-width: 2px;
+  height: 100px;
+  width: 85vw;
+  border-radius: 12px;
+  margin-left: 7vw;
+  justify-content: space-between;
+  padding: 7px;
+  margin-top: 10px;
+  padding-right: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d1d1d;
+}
+
+a {
+  text-decoration: none;
+  color: #ffe5d2;
+  font-size: 1.7rem;
+  margin-left: 1.2rem;
+}
+
+/*  https://kidscodecs.com/wp-content/uploads/2020/02/History_TS_ProgrammingMemes_image6.png  <------  meme van deze opdracht*/
+h1 {
   display: flex;
   justify-content: center;
   align-content: center;
-  color: #F5743C;
+  color: #f5743c;
   font-size: 50pt;
   letter-spacing: 8px;
 }
 
-#onboarding-gif{
+h3 {
+  margin-top: 2vh;
+}
+
+.center-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#menu-1 {
+  margin-top: 15vh;
+}
+
+.onboarding-gif {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: 200px;
 }
 
+#img-align {
+  scale: 60%;
+}
+
+.button {
+  background-color: #ff9f00;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 20px;
+
+  height: 5.5vh;
+}
+
+.button:hover {
+  background-color: #f5743c;
+  color: white;
+}
+
+nav {
+  margin-left: 20vw;
+  gap: 2vw;
+}
+
+/* login-screen */
+
+.form-container {
+  margin-top: 30vh;
+  gap: 10vw;
+  display: flex;
+}
+
+.form-wrapper {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.start-forms {
+  width: 100%;
+}
+
+.start-forms label,
+.start-forms input[type="text"],
+.start-forms input[type="email"],
+.start-forms input[type="password"],
+.start-forms input[type="submit"] {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+#submit-align {
+  margin-top: 2.7vh;
+}
+
+/* login-screen */
+
+/* products */
+#divider {
+  margin-top: 10vh;
+}
+
+th {
+  color: black;
+}
+
+.product-table {
+  width: 65%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  background-color: #ff9f00;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f5743c;
+}
+
+td {
+  letter-spacing: 1px;
+  font-size: 14pt;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10vh;
+  padding: 10px;
+  margin-bottom: 2vh;
+}
+
+#search-results {
+  width: 33vw;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+}
+
+input {
+  color: white;
+  background-color: #555;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: 20vw;
+}
+
+input[type="submit"] {
+  background-color: #ff9f00;
+  cursor: pointer;
+  width: 10vw;
+}
+/* products */
+
+/*HOME START*/
+.container {
+  display: flex;
+  margin-top: 20vh;
+  width: 80vw;
+  height: 40vh;
+}
+
+#ontdek {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+#tree {
+  padding-top: 2vh;
+  height: 45vh;
+}
+
+#cuisine {
+  padding-top: 5vh;
+  justify-content: space-between;
+}
+
+#onze-cuisine {
+  width: 20%;
+}
+
+#menu-text {
+  width: 50%;
+  margin-top: 15vh;
+}
+
+#menu-text p {
+  line-height: 2.2vh;
+}
+
+#menukaart {
+  width: 14vw;
+  font-size: 1.4rem;
+  margin-left: 0;
+}
+
+#cuisine-img {
+  justify-content: space-evenly;
+  scale: 120%;
+}
+
+#img-bump {
+  padding-top: 5vh;
+}
+
+#gallerij {
+  width: 6vw;
+  font-size: 1.4rem;
+  margin-left: 0;
+}
+
+/*HOME END*/
+
+/* RESERVEER */
+
+.full-width {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20vw;
+  margin-top: 20vh;
+  width: 100vw;
+  height: 40vh;
+  background-color: #f5743c;
+}
+
+.reserveer {
+  background: #f5743c;
+  color: white;
+}
+
+.a-newclass {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: white;
+}
+
+.bump-left {
+  margin-left: 1.1rem;
+}
+
+/* RESERVEER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 300px;
+  width: 100vw;
+}
+
+footer img {
+  scale: 80%;
+}
+
+footer h3 {
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  line-height: 1.2rem;
+}
+
+.bump-right {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.h2-form{
+  font-size: 24pt;
+  margin-bottom: 2vh;
+  margin-top: 5vh;
+
+}
+
+.form-align{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.admin-margin{
+  margin-top: 5rem;
+}
+
+.flex-admin-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
